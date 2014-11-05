@@ -1,0 +1,9 @@
+{
+  "name": "modern-webapp",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.3.0",
+    "angular": "~1.2.21",
+    "angular-ui-router": "~0.2.10"
+  }
+}

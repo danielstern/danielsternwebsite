@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-lg-6">
+        <h2>Using Modern Webapp</h2>
+        <h2>
+            Getting Started
+        </h2>
+        <h3>
+            Installation
+        </h3>
+        <p>
+        	The app can be installed by cloning the main repository.
+        </p>
+<pre><code>git clone git@github.com:danielstern/modern-webapp.git;
+</code></pre>     
+		<h3>Running the App</h3>
+        <p>
+            The app is run on node using grunt. Run npm install followed by bower install and grunt.
+        </p>
+        <pre><code>npm install;
+bower install;
+grunt serve;
+</code></pre>
+
+        <h3>Grunt Modes</h3>
+        <p>
+            Use grunt serve for development. grunt serve:dist can be used to test the build. grunt:build will create a fully built version in the /dist folder that can be used elsewhere.
+        </p>
+        <pre><code>grunt serve; // runs the app locally
+grunt serve:dist; // runs the app locally in its built form
+grunt build; // builds the app and puts it in the /dist folder
+</code></pre>
+
+        <h3>Deployment</h3>
+        <p>
+            The app can either be deployed by running build, then exporting the contents of the /dist directory to the endpoint of your choice, or by deploying to heroku.
+        </p>
+        <h4>Heroku Deployment</h4>
+        <pre><code>heroku create;
+git push heroku master;
+</code></pre>
+    </div>
+</div>
