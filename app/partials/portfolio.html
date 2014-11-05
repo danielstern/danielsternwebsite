@@ -14,7 +14,8 @@
     <div class='media-block-body'>
 	    <a ui-sref='project({project:item.shortname})'>
 	        <h3>{{item.name}}</h3>
-	    </a>
+        </a>
+        <h4>{{item.category}}</h4>
         <h4>
             {{item.shortDescription}}
         </h4>
@@ -23,11 +24,13 @@
         </p>
         <div class="skills">
             <ul>
-                <li ng-repeat='skill in item.skills'>
-                    <a ui-sref=portfolio({skill:skill})>
-				{{skill}}
-			</a>
-                </li>
+            <div ng-repeat='skill in item.skills'>
+                          <a ui-sref=portfolio({skill:skill})>
+                              <li>
+                                  {{skill}}
+                              </li>
+                          </a>
+                      </div>
             </ul>
         </div>
     </div>
