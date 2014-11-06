@@ -1,11 +1,23 @@
-<h2>Portfolio</h2>
+<!-- <div class="jumbotron">
+    <h1>Daniel Stern
+    </h1>
+    <img src=img/danielstern.png width=300>
+    <h2>
+        The Code Whisperer 
+        <span class="glyphicon glyphicon-star"></span>
+    </h2>
+    <p class="lead">This is the professional website of Daniel Stern, Toronto's Full Stack and Front End Developer</p>
+    </p>
+</div> -->
+
+<!-- <h2>Portfolio</h2> -->
 <p class="input-group">
     <input type="search" ng-model=portfolioSearch class="form-control portfolio-search">
     <span class="input-group-btn">
         <button type="submit" ng-click="portfolioSearch=undefined" class="btn btn-primary">X</button>
     </span>
 </p>
-<div class='media-block' ng-repeat='item in portfolio | filter: portfolioSearch'>
+<div class='media-block' class="move-animation" ng-animate ng-repeat='item in portfolio | filter: portfolioSearch' >
     <!-- <a target=_blank ng-href={{item.link}}> -->
     <!-- {{item}} -->
     <a ui-sref='project({project:item.shortname})'>
@@ -24,7 +36,7 @@
         </p>
         <div class="skills">
             <ul>
-            <div ng-repeat='skill in item.skills'>
+            <div ng-repeat='skill in item.skills | limitTo: 5' class="animate-repeat" >
                           <a ui-sref=portfolio({skill:skill})>
                               <li>
                                   {{skill}}

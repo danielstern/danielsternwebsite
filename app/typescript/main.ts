@@ -1,7 +1,7 @@
 /// <reference path="portfolio.ts"/>
 declare var angular:any;
 
-angular.module("DemoApp",['ui.router'])
+angular.module("DemoApp",['ui.router','ngAnimate'])
 .config(function($stateProvider,$urlRouterProvider) {
 	$urlRouterProvider.otherwise('/');
 
