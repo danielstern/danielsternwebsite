@@ -34,16 +34,14 @@
         <p>
             {{item.description}}
         </p>
-        <div class="skills">
-            <ul>
-            <div ng-repeat='skill in item.skills | limitTo: 5' class="animate-repeat" >
+        <div class="skills" >
+            <div ng-repeat='skill in item.skills | limitTo: 5'  >
                           <a ui-sref=portfolio({skill:skill})>
                               <li>
                                   {{skill}}
                               </li>
                           </a>
                       </div>
-            </ul>
         </div>
     </div>
     <div class=clearfix></div>

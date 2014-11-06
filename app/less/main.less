@@ -51,8 +51,8 @@ html {
 .media-block {
 	.sick-border();
 
-	max-width: @em * 40;
-	width: 100%;
+	width: @em * 40;
+	// width: 100%;
 	margin-bottom: @em;
 	height: 200px;
 	padding: @em;
@@ -98,7 +98,7 @@ to prevent collapsing during animation*/
 
 [ui-view].ng-enter {
   opacity: 0;
-  transform:translateY(-500px);
+  transform:translateX(-500px);
 }
 
 [ui-view].ng-enter-active {
@@ -135,15 +135,15 @@ to prevent collapsing during animation*/
 // .ng-move-active {
 // 	opacity: 0;
 // }
- 
-.ng-enter {
+// .skills {	
+.media-block.ng-enter {
   transition: 0.2s;
   opacity: 0;
   // transform:translateX(-250px);
   height: 0px;
-  overflow: auto;
+  overflow: hidden;
 }
-.ng-enter-active {
+.media-block.ng-enter-active {
   opacity: 1;
   transform:scale3d(1, 1, 1);
   height: 200px;
@@ -159,7 +159,7 @@ to prevent collapsing during animation*/
 //   transform:translateX(-250px);
 // }
 
-.ng-leave {
+.media-block.ng-leave {
   transition: 0.2s;
   opacity: 1;
   transform:scale3d(1, 1, 1);
@@ -168,10 +168,11 @@ to prevent collapsing during animation*/
   // transform:translateX(-250px);
 }
 
-.ng-leave-active {
+.media-block.ng-leave-active {
   opacity: 0;
  // transform:translateX(-250px);
   height: 0px;
   padding: 0;
   margin: 0;
 }
+// }
