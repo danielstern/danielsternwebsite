@@ -170,4 +170,58 @@ angular.module("DemoApp",['ui.router','ngAnimate'])
 		alt:"Impressive-looking controls",
 		description:'Angular.js allowed me to add simple customization of output with very little impact on development time or maintanance.'
 	}]
+},{
+	name:"Magic Circles",
+	year:'2014',
+	description:"This library generates animated circular SVG art.",
+	skills:["d3","svg"],
+	category:"Library",
+	shortname:"magic-circles",
+	link: "https://github.com/danielstern/MagicCircles",
+	img: [{
+		url:"img/circles-1.png",
+		shortname:'magic-circle',
+		title:'And now for something completely different',
+		alt:"A series of circles with text around the circumference of many, rings around that of others",
+		description:'I made a library for the unique purpose of leveraging SVG to make moving, circular art. The possibilities are endless.'
+	},{
+		url:"img/circles-2.png",
+		shortname:'detailed-examples',
+		title:'Detailed Examples',
+		description:'The websites includes detailed examples to allow developers to apply the circles in their own projects.',
+		alt:"Some documentation"
+	},{
+		url:"img/circles-3.png",
+		shortname:'magic-github',
+		title:'Active Github Page',
+		alt:"Some examples and code on Github",
+		description:'Github page is maintained to keep track of issues and let developers get involved.'
+	}]
+},{
+	name:"CYO",
+	year:'2013',
+	description:"This library lets people with little code knowledge make their own choose-your-own-adventure stories.",
+	skills:["angular"],
+	category:"Library",
+	shortname:"cyo",
+	link: "https://github.com/danielstern/cyo",
+	img: [{
+		url:"img/cyo-4.png",
+		shortname:'cyo-logo',
+		title:'A creative library',
+		alt:"The letters C-Y-O in different colors.",
+		description:'The colorful logo suggests it is a creative library.'
+	},{
+		url:"img/cyo-2.png",
+		shortname:'cyo-docs',
+		title:'Clear Documentation',
+		description:'Clear documentation and simple classes make this library easy to use.',
+		alt:"Some documentation"
+	},{
+		url:"img/cyo-3.png",
+		shortname:'cyo-story',
+		title:'A Platform for Storytelling',
+		alt:"A choose your own adventure story",
+		description:'CYO is a tool for making stories and games. See the links in this section.'
+	}]
 }])
