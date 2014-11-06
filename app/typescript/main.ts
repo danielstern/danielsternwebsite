@@ -114,7 +114,7 @@ angular.module("DemoApp",['ui.router'])
 	name:"angular audio",
 	year:'2014',
 	description:"A JavaScript library used to intergrate audio elements into Angular.js projects. Was featured at Full-Stack Conf in London, England.",
-	skills:["bootstrap","angular","seo","html5","web audio","git",'javascript'],
+	skills:["bootstrap","angular","html5","web-audio","git",'javascript'],
 	category:"Library",
 	shortname:"angular-audio",
 	link: "http://danielstern.github.io/ngAudio/#/",
@@ -137,5 +137,4 @@ angular.module("DemoApp",['ui.router'])
 		alt:"Impressive-looking documentation",
 		description:'To make angular audio a practical solution for developers on real-world projects, I documented it in thorough detail.'
 	}]
-	// img: "img/angular-audio-1.png"
 }])
