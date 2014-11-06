@@ -12,7 +12,12 @@ angular.module("DemoApp",['ui.router','ngAnimate'])
 	})
 	.state('portfolio',{
 		url: '/portfolio?skill',
-		// abstract: 'true'
+		controller:function($stateParams,$scope){
+			if ($stateParams.skill) {$scope.portfolioSearch = $stateParams.skill};
+			$scope.$on('$locationChangeSuccess', function(event){
+			    if ($stateParams.skill) {$scope.portfolioSearch = $stateParams.skill};
+			})
+		},
     	templateUrl:'partials/portfolio.html'
 	})
 	.state('project',{
@@ -39,7 +44,7 @@ angular.module("DemoApp",['ui.router','ngAnimate'])
 				return img.shortname === $stateParams.image;
 			})[0];
 
-			console.log("image?",$scope.image);
+			// console.log("image?",$scope.image);
 
     	}
 	})
@@ -48,11 +53,12 @@ angular.module("DemoApp",['ui.router','ngAnimate'])
     	templateUrl:'partials/features.html'
 	});
 })
-.run(function($rootScope,portfolio,$stateParams){
+.run(function($rootScope,portfolio){
 	$rootScope.portfolio = portfolio;
-	$rootScope.$on('$locationChangeSuccess', function(event){
-	    if ($stateParams.skill) {$rootScope.portfolioSearch = $stateParams.skill};
-	})
+
+	// console.log("Run...",$stateParams);
+
+	
 })
 .value("portfolio",[{
 	name:"Maple-A-Month",
