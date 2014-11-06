@@ -143,4 +143,31 @@ angular.module("DemoApp",['ui.router','ngAnimate'])
 		alt:"Impressive-looking documentation",
 		description:'To make angular audio a practical solution for developers on real-world projects, I documented it in thorough detail.'
 	}]
+},{
+	name:"Lorien Ipsum",
+	year:'2014',
+	description:"This website is a tool that generates Lorem Ipsum in Elvish.",
+	skills:["bootstrap","angular","html5"],
+	category:"Website",
+	shortname:"lorien-ipsum",
+	link: "http://danielstern.ca/lorienIpsum/",
+	img: [{
+		url:"img/lorien-1.png",
+		shortname:'lorien-ipsum-main',
+		title:'A fast, responsive interface',
+		alt:"A picture of Legolas and some options",
+		description:'A few simple options and a colorful button are all it takes to generate this text.'
+	},{
+		url:"img/lorien-2.png",
+		shortname:'lorien-text',
+		title:'More than filler text',
+		alt:'English text being translated to elvish',
+		description:"This tool generates filler text in English or Elvish, and provides translations!"
+	},{
+		url:"img/lorien-3.png",
+		shortname:'lorien-contrls',
+		title:'Using Angular to speed development',
+		alt:"Impressive-looking controls",
+		description:'Angular.js allowed me to add simple customization of output with very little impact on development time or maintanance.'
+	}]
 }])
