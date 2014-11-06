@@ -54,7 +54,7 @@ html {
 	width: @em * 40;
 	// width: 100%;
 	margin-bottom: @em;
-	height: 200px;
+	// height: 200px;
 	padding: @em;
 	border-radius: 3px;
 	img {
@@ -72,6 +72,33 @@ html {
 		
 		width: 400px;
 	}
+}
+
+
+@media (max-width: 768px) {
+ .media-block {
+ 	// width: @em * 40;
+ 	width:100%;
+ 	margin-bottom: @em;
+ 	// height: 200px;
+ 	padding: @em;
+ 	border-radius: 3px;
+ 	img {
+ 		width: 100%;
+ 		float: none;
+ 		margin-bottom:  @em;
+ 	}
+
+ 	h3,h4 {
+ 		margin-top: 0px;
+ 	}
+
+
+ 	.media-block-body {
+ 		float: none;
+ 		width: 100%;
+ 	}
+ }
 }
 
 .responsive {
@@ -136,43 +163,44 @@ to prevent collapsing during animation*/
 // 	opacity: 0;
 // }
 // .skills {	
-.media-block.ng-enter {
-  transition: 0.2s;
-  opacity: 0;
-  // transform:translateX(-250px);
-  height: 0px;
-  overflow: hidden;
-}
-.media-block.ng-enter-active {
-  opacity: 1;
-  transform:scale3d(1, 1, 1);
-  height: 200px;
-}
-
-// .ng-move {
+// .media-block.ng-enter {
 //   transition: 0.2s;
-//   opacity: .5;
-//   transform:translateX(-250px);
+//   opacity: 0;
+//   // transform:translateX(-250px);
+//   // height: 0px;
+//   overflow: hidden;
 // }
-// .ng-move-active {
-//   opacity: .5;
-//   transform:translateX(-250px);
+// .media-block.ng-enter-active {
+//   opacity: 1;
+//   transform:scale3d(1, 1, 1);
+//   // height: 200px;
 // }
 
-.media-block.ng-leave {
-  transition: 0.2s;
-  opacity: 1;
-  transform:scale3d(1, 1, 1);
-  height: 200px;
-  overflow: hidden;
-  // transform:translateX(-250px);
-}
+// // .ng-move {
+// //   transition: 0.2s;
+// //   opacity: .5;
+// //   transform:translateX(-250px);
+// // }
+// // .ng-move-active {
+// //   opacity: .5;
+// //   transform:translateX(-250px);
+// // }
 
-.media-block.ng-leave-active {
-  opacity: 0;
- // transform:translateX(-250px);
-  height: 0px;
-  padding: 0;
-  margin: 0;
-}
+// .media-block.ng-leave {
+//   transition: 0.2s;
+//   opacity: 1;
+//   transform:scale3d(1, 1, 1);
+//   // height: 200px;
+//   overflow: hidden;
+//   // transform:translateX(-250px);
 // }
+
+// .media-block.ng-leave-active {
+//   opacity: 0;
+//  // transform:translateX(-250px);
+//   height: 0px;
+//   padding: 0;
+//   margin: 0;
+// }
+
+// // }
