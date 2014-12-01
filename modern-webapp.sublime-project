@@ -2,9 +2,18 @@
 	"folders":
 	[
 		{
+			"folder_exclude_patterns":
+			[
+				"dist",
+				"bower_components",
+				"node_modules"
+			],
 			"follow_symlinks": true,
-			"folder_exclude_patterns": ["dist","bower_components","node_modules"],
 			"path": "."
+		},
+		{
+			"follow_symlinks": true,
+			"path": "D:\\Projects\\material\\docs\\app"
 		}
 	]
 }

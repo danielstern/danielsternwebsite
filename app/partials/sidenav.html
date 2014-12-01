@@ -1,4 +1,4 @@
-<div class=sidenav-content>
+<div class=sidenav-content ng-controller=DocsCtrl>
     <!-- <img src=img/danielstern-optimized.jpg> -->
     <div class=sidenav-main-image>
 
@@ -6,29 +6,39 @@
     <div class=sidenav-body>
 
         <!-- <p class="lead">This is the professional website of Daniel Stern, Toronto's Full Stack and Front End Developer</p> -->
-        <h3>
-        About Me
+        <!-- <h3> -->
+        <!-- About Me -->
     </h3>
-    <div ng-repeat="section in menu.sections" class="ng-scope" ng-controller=DocsCtrl>
+
+    <button class="menu-item menu-title md-menu-item ng-binding" ng-click="menu.toggleSelectSection('about')" md-highlight="menu.isSectionSelected(section)" md-ink-ripple="#bbb" tabindex="0" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+      About me
+    <div class="md-ripple-container" style=""></div></button>
+
+    <!-- ngRepeat: page in section.pages --><a class="menu-item menu-sub-item md-menu-item ng-scope ng-hide" ng-show="menu.isSectionSelected('about')"   ng-href="#/demo/material.components.bottomSheet" md-highlight="menu.isPageSelected("about", page)" md-ink-ripple="#bbb" href="#/demo/material.components.bottomSheet" aria-hidden="true" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+      <div ng-include="'partials/about-me.html'"></div>
+    </a>
+
+    <div ng-repeat="section in menu.sections" class="ng-scope" >
         
             <button class="menu-item menu-title md-menu-item ng-binding" ng-click="menu.toggleSelectSection(section)" md-highlight="menu.isSectionSelected(section)" md-ink-ripple="#bbb" tabindex="0" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
               Demos
             <div class="md-ripple-container" style=""></div></button>
 
-            <!-- ngRepeat: page in section.pages --><a class="menu-item menu-sub-item md-menu-item ng-scope ng-hide" ng-show="menu.isSectionSelected(section)" x-repeat="page in section.pages" ng-href="#/demo/material.components.bottomSheet" md-highlight="menu.isPageSelected(section, page)" md-ink-ripple="#bbb" href="#/demo/material.components.bottomSheet" aria-hidden="true" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
-              <span >Bottom Sheet</span>
+            <!-- ngRepeat: page in section.pages --><a class="menu-item menu-sub-item md-menu-item ng-scope ng-hide" ng-show="menu.isSectionSelected(section)" ng-repeat="page in section.pages" ng-href="#/demo/material.components.bottomSheet" md-highlight="menu.isPageSelected(section, page)" md-ink-ripple="#bbb" href="#/demo/material.components.bottomSheet" aria-hidden="true" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+              <span>{{page.name}}</span>
             </a>
 
           </div>
-     <!--    <p>
-            I develop full stack web applications as both a profession and a hobby. I am passionate about learning new technologies and building tools and websites that make a difference.
-        </p>
-        <p>
-            I currently reside in Toronto, Ontario and develop new projects actively.
-        </p>
+     <!--   -->
+        <!-- <h3>Top Skills</h3>
+        <button class="menu-item menu-title md-menu-item ng-binding" ng-click="menu.toggleSelectSection(section)" md-highlight="menu.isSectionSelected(section)" md-ink-ripple="#bbb" tabindex="0" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+          Demos
+        <div class="md-ripple-container" style=""></div></button>
 
-        <h3>Top Skills</h3>
-        <a ui-sref="portfolio({skill:'angular'})">
+          <span>{{page.name}}</span>
+        </a>
+        </div> -->
+     <!--    <a ui-sref="portfolio({skill:'angular'})">
             <h4>Angular.js</h4>
         </a>
         <p>
@@ -57,9 +67,9 @@
         </h4>
         <p>
             I use Google analytics to manage the analytics of all my projects, and I've managed the Google Analytics and SiteCatalyst architectures for Fortune 500 companies and their e-commerce sites.
-        </p>
+        </p> -->
 
-        <h3>Other Skills</h3>
+        <!-- <h3>Other Skills</h3>
         <h4>Node.js</h4>
         <h4>HTML5</h4>
         <h4>CSS</h4>
