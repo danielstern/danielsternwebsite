@@ -1,7 +1,7 @@
 /// <reference path="portfolio.ts"/>
 declare var angular:any;
 
-angular.module("DemoApp",['ui.router','ngAnimate'])
+angular.module("DemoApp",['ui.router','ngAnimate','ngMaterial'])
 .config(function($stateProvider,$urlRouterProvider) {
 	$urlRouterProvider.otherwise('/');
 
@@ -59,6 +59,26 @@ angular.module("DemoApp",['ui.router','ngAnimate'])
 	// console.log("Run...",$stateParams);
 
 	
+})
+.controller('AppCtrl', function($scope, $timeout, $mdSidenav) {
+  $scope.toggleLeft = function() {
+  	console.log("Toggling left")
+    $mdSidenav('left').toggle();
+  };
+  $scope.toggleRight = function() {
+    $mdSidenav('right').toggle();
+  };
+})
+.controller('LeftCtrl', function($scope, $timeout, $mdSidenav) {
+	console.log("Left ctrl init.");
+  $scope.close = function() {
+    $mdSidenav('left').close();
+  };
+})
+.controller('RightCtrl', function($scope, $timeout, $mdSidenav) {
+  $scope.close = function() {
+    $mdSidenav('right').close();
+  };
 })
 .value("portfolio",[{
 	name:"Maple-A-Month",

@@ -14,7 +14,6 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="shim.css">
     <!-- endbuild -->
 
     <!-- social -->
@@ -36,33 +35,54 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 </head>
 
-<body ng-app='docsApp' class='demo-content' layout=row md-theme=blue ng-controller=DocsCtrl>
-     
-    <md-content flex >
+<body ng-app='DemoApp'>
 
-        <div layout=row flex>
-           <div layout='column' layout-fill tabindex='-1'>
-               <md-toolbar layout=column >
-                   <h2  class="md-toolbar-tools" flex layout=column tabindex=0>
-                   <md-button  class="md-primary" ng-click="toggleLeft()">
-                      <span>Daniel Stern</span>
-                    </md-button>
-                   </h2>
-               </md-toolbar>
+    <div layout=flex flex>
+        
+    <div layout=column></div>
 
-               <md-content class="md-padding" >
-                  <md-button  class="md-primary" hide-gt-md>
-                    Portfolio
-                </md-button>
-               </md-content>
-               <div ui-view></div>
-           </div>
-        </div>
-    </md-content>
-
-     <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right" component-id="left" is-locked-open="$media('md')">
-        <div ng-include="'partials/sidenav.html'"></div>
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" component-id="left" id='left' is-locked-open="$media('md')">
+        <md-toolbar class="md-theme-indigo">
+            <h1 class="md-toolbar-tools">Sidenav Left</h1>
+        </md-toolbar>
+        <md-content class="md-padding" ng-controller="LeftCtrl">
+            <md-button ng-click="close()" class="md-primary" hide-gt-md>
+                Close Sidenav Left
+            </md-button>
+            <p hide show-gt-md>
+                This sidenav is locked open on your device. To go back to the default behavior, narrow your display.
+            </p>
+        </md-content>
     </md-sidenav>
+    <div flex flex=70>
+    <div ng-include="'partials/navbar.html'"></div>
+    </div>
+
+    </div>
+    <div layout=row layout></div>
+
+
+    
+
+    <div class="container" layout-flex flex>
+        <nav class="navbar navbar-default" role="navigation">
+            
+            </div>
+        <div class="ui-view-container">
+        <div ui-view></div>
+        </div>
+
+
+        <div class='footer'>
+            <hr>
+            <div class="panel container text-muted">
+                <p>
+                <a target=_blank href="mailto:daniel@danielstern.ca">
+                    <span class="glyphicon glyphicon-pencil"></span> daniel@danielstern.ca</p>
+                </a>
+            </div>
+        </div>
+
 
 
         <!-- build:js(.) scripts/vendor.js -->
@@ -74,10 +94,10 @@
         <script src="bower_components/hammerjs/hammer.js"></script>
         <script src="bower_components/angular-aria/angular-aria.js"></script>
         <script src="bower_components/angular-material/angular-material.js"></script>
-        <script src="bower_components/angular-route/angular-route.js"></script>
-        <script src="bower_components/angularytics/dist/angularytics.min.js"></script>
         <!-- endbower -->
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
         <!-- endbuild -->
+
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>

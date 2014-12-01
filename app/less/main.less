@@ -1,216 +1,29 @@
-@em:16px;
-
-.sick-border() {
-	border: 1px solid #ddd;
-	border-bottom: 2px solid #ddd;
-	border-radius: 3px;
+.blue-element {
+	background-color: blue;
 }
 
-html {
-	body {
-	  background-color: white;
-	  font-family: 'Roboto', sans-serif;
-	}
-}
-
-.jumbotron {
-	text-align: center;
+.sidenav-content {
 	img {
 		width: 100%;
-		max-width: 300px;
-		.sick-border();
-	}
-}
-
-.input-group {
-	max-width: @em * 40;
-	width: 100%;
-}
-
-.project-image-feature {
-	img {
-		.sick-border();
-		padding: @em;
-	}
-}
-
-
-.skills {
-	ul {
-		padding: 0px;
 	}
 
-	li {
-		float: left;
-		list-style: none;
-		margin: @em /2 @em /4;
-		border: 1px solid #ddd;
-		border-bottom: 2px solid #ddd;
-		padding: @em / 4;
-		font-size: @em * 3 / 4;
-
-
+	.sidenav-body {
+		background-color: steelblue;
+		color: white;
+		font-size: 1.2rem;
+		padding: 1rem;	
 	}
 
-}
+	
 
-.media-block {
-	.sick-border();
-
-	width: @em * 40;
-	// width: 100%;
-	margin-bottom: @em;
-	// height: 200px;
-	padding: @em;
-	border-radius: 3px;
-	img {
-		width: @em * 10;
-		float: left;
-	}
-
-	h3,h4 {
-		margin-top: 0px;
-	}
-
-
-	.media-block-body {
-		float: right;
-		
-		width: 400px;
+	.sidenav-main-image {
+		height: 250px;
+		width: 100%;
+		background-color: steelblue;
+		background-image: url('../img/danielstern-optimized.jpg');
+		background-opacity: 0.8;
+		background-blend-mode: multiply;
+		background-position: -10px -10px;
+		background-size: 110%;
 	}
 }
-
-
-@media (max-width: 768px) {
- .media-block {
- 	// width: @em * 40;
- 	width:100%;
- 	margin-bottom: @em;
- 	// height: 200px;
- 	padding: @em;
- 	border-radius: 3px;
- 	img {
- 		width: 100%;
- 		float: none;
- 		margin-bottom:  @em;
- 	}
-
- 	h3,h4 {
- 		margin-top: 0px;
- 	}
-
-
- 	.media-block-body {
- 		float: none;
- 		width: 100%;
- 	}
- }
-}
-
-.responsive {
-	width: 100%;
-}
-
-@speed: .2s;
-/* Have to set height explicity on ui-view 
-to prevent collapsing during animation*/
-[ui-view]{
- // height: 1250px; 
-}
-
-.project-first {
-	margin-bottom: @em;
-}
-
-.ui-view-container {
-  position: relative;
-}
-
-[ui-view].ng-enter, [ui-view].ng-leave {
-  position: absolute;
-  left: 0;
-  right: 0;
-  transition:all @speed ease-in-out;
-}
-
-[ui-view].ng-enter {
-  opacity: 0;
-  transform:translateX(-500px);
-}
-
-[ui-view].ng-enter-active {
-  opacity: 1;
-  transform:scale3d(1, 1, 1);
-}
-
-[ui-view].ng-leave {
-  opacity: 1;
-  transform:scale3d(1, 1, 1);
-}
-
-[ui-view].ng-leave-active {
-  opacity: 0;
-  // transform:scale3d(.5, .5, .5);
-  // transform:translate3d(100px, 0, 0);
-  // transform:translateY(-100px);
-}
-/* Styles go here */
-
-// .example-animate-container {
-//   background:white;
-//   border:1px solid black;
-//   list-style:none;
-//   margin:0;
-//   padding:0 10px;
-// }
-
-// .ng-move {
-// 	transition: 0.2s;
-// 	opacity: 0.5;
-// }
-
-// .ng-move-active {
-// 	opacity: 0;
-// }
-// .skills {	
-// .media-block.ng-enter {
-//   transition: 0.2s;
-//   opacity: 0;
-//   // transform:translateX(-250px);
-//   // height: 0px;
-//   overflow: hidden;
-// }
-// .media-block.ng-enter-active {
-//   opacity: 1;
-//   transform:scale3d(1, 1, 1);
-//   // height: 200px;
-// }
-
-// // .ng-move {
-// //   transition: 0.2s;
-// //   opacity: .5;
-// //   transform:translateX(-250px);
-// // }
-// // .ng-move-active {
-// //   opacity: .5;
-// //   transform:translateX(-250px);
-// // }
-
-// .media-block.ng-leave {
-//   transition: 0.2s;
-//   opacity: 1;
-//   transform:scale3d(1, 1, 1);
-//   // height: 200px;
-//   overflow: hidden;
-//   // transform:translateX(-250px);
-// }
-
-// .media-block.ng-leave-active {
-//   opacity: 0;
-//  // transform:translateX(-250px);
-//   height: 0px;
-//   padding: 0;
-//   margin: 0;
-// }
-
-// // }
