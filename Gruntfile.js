@@ -160,6 +160,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     '.tmp/styles/main.css': 'app/less/main.less',
+                    // '.tmp/styles/shim.css': 'app/less/shim.css',
                 }
             }
         },
