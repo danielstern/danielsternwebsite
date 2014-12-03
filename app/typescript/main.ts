@@ -144,6 +144,33 @@ angular.module("DemoApp",['ui.router','ngAnimate'])
 		description:'To make angular audio a practical solution for developers on real-world projects, I documented it in thorough detail.'
 	}]
 },{
+	name:"Squaretide",
+	year:'2014',
+	description:"A JavaScript Hybrid Webapp project game using HTML5 and the web audio API",
+	skills:["mobile","tablet","hybrid","app","web-audio",'material-design'],
+	category:"Game",
+	shortname:"squaretide",
+	link: "http://danielstern.ca/squaretide",
+	img: [{
+		url:"img/squaretide.jpg",
+		shortname:'squaretide-main',
+		title:'Thinking Square with Material Design',
+		alt:"A cool looking game with a flat, square theme",
+		description:'I wanted to do this project to try out new principles of material design I learned based on Android and Google. Every element is flat with a light shadow.'
+	},{
+		url:"img/squaretide2.jpg",
+		shortname:'squaretide-responsive',
+		title:'Designing an interface for all Devices',
+		alt:'An interface with instructions neatly tucked into the bottom',
+		description:"This hybrid app has a responsive layout to make intelligent use of a limited amount of space."
+	},{
+		url:"img/squaretide3.jpg",
+		shortname:'squaretide-action',
+		title:'Touch Aware Gameplay',
+		alt:"Some colorful squares",
+		description:'The interface is designed to work well on iPad and Tablet, and the choice to go with HTML and JavaScript went accordingly. The interface is even more satisfying on a touch screen.'
+	}]
+},{
 	name:"Lorien Ipsum",
 	year:'2014',
 	description:"This website is a tool that generates Lorem Ipsum in Elvish.",
