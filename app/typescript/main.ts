@@ -171,6 +171,33 @@ angular.module("DemoApp",['ui.router','ngAnimate'])
 		description:'The interface is designed to work well on iPad and Tablet, and the choice to go with HTML and JavaScript went accordingly. The interface is even more satisfying on a touch screen.'
 	}]
 },{
+	name:"Jukebox.js",
+	year:'2014',
+	description:"A JavaScript library for generating sound in real-time with the web audio API",
+	skills:["mobile","tablet","hybrid","app","javascript",'angular','touch','web-audio'],
+	category:"Library",
+	shortname:"jukebox",
+	link: "http://danielstern.github.io/jukeboxjs/#/",
+	img: [{
+		url:"img/jukebox-1.jpg",
+		shortname:'jukebox-main',
+		title:'A cutting edge library',
+		alt:"A music note combined with a computer chip",
+		description:'The web audio API is an very new and exciting browser feature for generating sounds and music. This library uses it to make music'
+	},{
+		url:"img/jukebox-2.jpg",
+		shortname:'jukebox-keys',
+		title:'A Touch-Friendly Interface',
+		alt:'A keyboard and a pad',
+		description:"To show off what this library can do, I made lots of demos to showcase its various musical capabilities. The demos are all compatible with multi-touch on tablets and phones."
+	},{
+		url:"img/jukebox-3.jpg",
+		shortname:'jukebox-tools',
+		title:'Jukebox Tools',
+		alt:"A metronome",
+		description:'Jukebox.js is more than an interesting libary. It has some applications that are practical, like with this metronome I developed as part of the page.'
+	}]
+},{
 	name:"Lorien Ipsum",
 	year:'2014',
 	description:"This website is a tool that generates Lorem Ipsum in Elvish.",
